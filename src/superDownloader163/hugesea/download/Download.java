@@ -22,8 +22,11 @@ public class Download {
 		JSONObject JSON_Result = JSON.parseObject(JSON_Object_SongUrl.getJSONArray("data").get(0).toString());
 		SongUrl = JSON_Result.getString("url");
 		
+		String replacedSongName = SongName.replace(" ", "_");
+		replacedSongName = SongName.replace("/", "\\");
+		
 		try {
-			saveFile(SongName,SongAuthor,SongUrl);
+			saveFile(replacedSongName,SongAuthor,SongUrl);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
