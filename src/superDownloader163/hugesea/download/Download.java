@@ -8,7 +8,7 @@ import com.alibaba.fastjson.*;
 
 @SuppressWarnings("deprecation")
 public class Download {
-	public static void Download(String SongName,String SongAuthor,String SongCode) {
+	public static void downloadFile(String SongName,String SongAuthor,String SongCode) {
 		String SongUrl = null;
 		
 		String HttpJSON_SongInformation = getSongInfomation(SongCode).substring(1,getSongInfomation(SongCode).length()-1);

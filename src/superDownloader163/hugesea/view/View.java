@@ -91,7 +91,7 @@ public class View {
         			JOptionPane.showMessageDialog(null, "Please enter the Song Code and try again!", "Error", JOptionPane.ERROR_MESSAGE);
         		} else {
         			buttonCheck.setEnabled(true);
-        			superDownloader163.hugesea.download.Download.Download(fieldSongName.getText(),fieldSongAuthor.getText(),fieldSongCode.getText());
+        			superDownloader163.hugesea.download.Download.downloadFile(fieldSongName.getText(),fieldSongAuthor.getText(),fieldSongCode.getText());
         			fieldSongCode.setText("");
         			fieldSongName.setText("");
         			fieldSongAuthor.setText("");
